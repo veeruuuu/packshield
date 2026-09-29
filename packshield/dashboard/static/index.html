@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PackShield</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+  <canvas id="particle-bg"></canvas>
+  <div id="custom-cursor"></div>
+
+  <div id="app">
+    <nav id="sidebar">
+      <div class="brand">
+        <span class="brand-glow">◈</span> PackShield
+      </div>
+      <div class="nav-links">
+        <a href="#/overview" data-route="overview">Overview</a>
+        <a href="#/live" data-route="live">Live Scan</a>
+        <a href="#/graph" data-route="graph">Dependency Graph</a>
+        <a href="#/threats" data-route="threats">Threats</a>
+        <a href="#/forensics" data-route="forensics">Package Forensics</a>
+        <a href="#/history" data-route="history">History</a>
+        <a href="#/settings" data-route="settings">Settings</a>
+      </div>
+      <div class="sidebar-footer">
+        <span id="shim-indicator" class="status-dot"></span>
+        <span id="shim-label">checking shim...</span>
+      </div>
+    </nav>
+
+    <main id="content">
+      <div id="page" class="page"></div>
+    </main>
+  </div>
+
+  <div id="command-palette-overlay" class="hidden">
+    <div id="command-palette">
+      <input id="cp-input" type="text" placeholder="Search scans by package name... (Esc to close)" autocomplete="off">
+      <div id="cp-results"></div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
