@@ -424,16 +424,42 @@ def ui(port: int, no_browser: bool):
 @click.argument("pm")
 @click.argument("args", nargs=-1, type=click.UNPROCESSED)
 def shim_intercept(pm: str, args: tuple):
-    """Hidden command: called by the npm.cmd/pip.cmd shim scripts. Not
-    intended to be invoked directly by a person."""
+    """Hidden command: called by the npm.cmd/pip.cmd shim scripts and the
+    PowerShell profile functions. Not intended to be invoked directly.
+
+    Scans the raw args for --shieldmax and --override "reason" so those
+    flags work through real `npm install`/`pip install`, not just through
+    the explicit `packshield install` command."""
     real_binary = get_real_binary(pm)
     if not real_binary:
         console.print(f"[bold red]✗ Shim misconfigured: no real {pm} path recorded. Run `packshield shim install` again.[/bold red]")
         sys.exit(1)
 
     args = list(args)
-    is_install = len(args) >= 1 and args[0] in ("install", "i", "add")
-    has_named_package = len(args) >= 2 and not args[1].startswith("-")
+
+    # Pull out our own flags before deciding what's a package name, so
+    # `npm install express --shieldmax` and `pip install requests --override "reason"`
+    # both work exactly like `packshield install ... --shieldmax/--override` does.
+    shieldmax = False
+    override_reason = None
+    remaining_args = []
+    i = 0
+    while i < len(args):
+        if args[i] == "--shieldmax":
+            shieldmax = True
+            i += 1
+        elif args[i] == "--override":
+            if i + 1 < len(args):
+                override_reason = args[i + 1]
+                i += 2
+            else:
+                i += 1  # malformed, no reason given -- drop the bare flag rather than crash
+        else:
+            remaining_args.append(args[i])
+            i += 1
+
+    is_install = len(remaining_args) >= 1 and remaining_args[0] in ("install", "i", "add")
+    has_named_package = len(remaining_args) >= 2 and not remaining_args[1].startswith("-")
 
     if not is_install or not has_named_package:
         if is_install and not has_named_package:
@@ -441,11 +467,11 @@ def shim_intercept(pm: str, args: tuple):
                 "[bold yellow]⚠ PackShield: bare install (no named package) is not yet "
                 "covered by this pipeline -- passing through WITHOUT scoring.[/bold yellow]"
             )
-        result = subprocess.run([real_binary] + args)
+        result = subprocess.run([real_binary] + remaining_args)
         sys.exit(result.returncode)
 
-    package = args[1]
-    sys.exit(run_pipeline(package, pm, shieldmax=False, override_reason=None))
+    package = remaining_args[1]
+    sys.exit(run_pipeline(package, pm, shieldmax, override_reason))
 
 
 if __name__ == "__main__":

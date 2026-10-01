@@ -13,6 +13,7 @@ const canvas = document.getElementById('particle-bg');
 const ctx = canvas.getContext('2d');
 let particles = [];
 const mouse = { x: -1000, y: -1000 };
+let particleIntensity = 1; // temporarily boosted during the paranoid-mode activation animation
 
 function resizeCanvas() {
   canvas.width = window.innerWidth;
@@ -23,7 +24,7 @@ resizeCanvas();
 
 document.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
 
-for (let i = 0; i < 60; i++) {
+for (let i = 0; i < 70; i++) {
   particles.push({
     x: Math.random() * window.innerWidth,
     y: Math.random() * window.innerHeight,
@@ -34,8 +35,9 @@ for (let i = 0; i < 60; i++) {
 
 function animateParticles() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const speedMul = particleIntensity;
   particles.forEach(p => {
-    p.x += p.vx; p.y += p.vy;
+    p.x += p.vx * speedMul; p.y += p.vy * speedMul;
     if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
     if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
 
@@ -44,20 +46,22 @@ function animateParticles() {
     if (dist < 150) { p.x -= dx * 0.01; p.y -= dy * 0.01; }
 
     ctx.beginPath();
-    ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(88,166,255,0.5)';
+    ctx.arc(p.x, p.y, 1.6, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(255,${Math.round(70 - 30 * (particleIntensity - 1))},${Math.round(70 - 30 * (particleIntensity - 1))},0.6)`;
     ctx.fill();
   });
 
+  const linkDist = 100 + (particleIntensity - 1) * 60;
   for (let i = 0; i < particles.length; i++) {
     for (let j = i + 1; j < particles.length; j++) {
       const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y;
       const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < 100) {
+      if (dist < linkDist) {
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(88,166,255,${0.1 * (1 - dist / 100)})`;
+        ctx.strokeStyle = `rgba(255,59,59,${0.12 * particleIntensity * (1 - dist / linkDist)})`;
+        ctx.lineWidth = particleIntensity > 1.3 ? 1.2 : 0.8;
         ctx.stroke();
       }
     }
@@ -65,6 +69,22 @@ function animateParticles() {
   requestAnimationFrame(animateParticles);
 }
 animateParticles();
+
+function pulseParticleIntensity(peak, durationMs) {
+  const start = performance.now();
+  function step(now) {
+    const t = Math.min(1, (now - start) / durationMs);
+    // ease up fast, ease back down slowly, like a system spooling up then settling
+    if (t < 0.2) {
+      particleIntensity = 1 + (peak - 1) * (t / 0.2);
+    } else {
+      particleIntensity = peak - (peak - 1) * ((t - 0.2) / 0.8);
+    }
+    if (t < 1) requestAnimationFrame(step);
+    else particleIntensity = 1;
+  }
+  requestAnimationFrame(step);
+}
 
 // ---------- Router ----------
 const routes = {
@@ -128,29 +148,48 @@ async function renderOverview() {
     return;
   }
 
+  const maxFlagged = Math.max(...stats.top_flagged_packages.map(([, c]) => c), 1);
+
   page.innerHTML = `
     <h1>Overview</h1>
     <div class="subtitle">Real aggregate stats from ${stats.total_scans} recorded scan(s).</div>
-    <div class="panel">
-      <h2>Verdict Breakdown</h2>
-      <div class="stat-grid">
-        <div class="stat-card"><div class="value">${stats.total_scans}</div><div class="label">Total Scans</div></div>
-        <div class="stat-card"><div class="value" style="color:var(--allow)">${stats.verdict_counts.ALLOW || 0}</div><div class="label">Allow</div></div>
-        <div class="stat-card"><div class="value" style="color:var(--warn)">${stats.verdict_counts.WARN || 0}</div><div class="label">Warn</div></div>
-        <div class="stat-card"><div class="value" style="color:var(--block)">${stats.verdict_counts.BLOCK || 0}</div><div class="label">Block</div></div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card hero">
+        <div class="kpi-label">◈ Total Scans</div>
+        <div class="kpi-value">${stats.total_scans}</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label" style="color:var(--allow)">Allow</div>
+        <div class="kpi-value" style="color:var(--allow)">${stats.verdict_counts.ALLOW || 0}</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label" style="color:var(--warn)">Warn</div>
+        <div class="kpi-value" style="color:var(--warn)">${stats.verdict_counts.WARN || 0}</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label" style="color:var(--block)">Block</div>
+        <div class="kpi-value" style="color:var(--block)">${stats.verdict_counts.BLOCK || 0}</div>
       </div>
     </div>
+
     <div class="panel">
       <h2>Most Frequently Flagged Packages</h2>
-      <table><thead><tr><th>Package</th><th>Times flagged as worst offender</th></tr></thead><tbody>
-        ${stats.top_flagged_packages.map(([name, count]) => `<tr><td>${name}</td><td>${count}</td></tr>`).join('')}
-      </tbody></table>
+      ${stats.top_flagged_packages.map(([name, count]) => `
+        <div class="bar-row">
+          <div class="bar-row-top"><span class="bar-row-name">${name}</span><span class="bar-row-count">${count}</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:${Math.round((count / maxFlagged) * 100)}%"></div></div>
+        </div>
+      `).join('')}
     </div>
+
     <div class="panel">
       <h2>Likely Attack Pattern <span class="sim-badge">inferred from worst signal, not a real classifier</span></h2>
-      <table><thead><tr><th>Pattern</th><th>Count</th></tr></thead><tbody>
-        ${Object.entries(stats.likely_attack_type_counts).map(([t, c]) => `<tr><td>${t}</td><td>${c}</td></tr>`).join('')}
-      </tbody></table>
+      <div class="pattern-row">
+        ${Object.entries(stats.likely_attack_type_counts).map(([t, c]) => `
+          <div class="pattern-pill"><div class="count">${c}</div><div class="label">${t}</div></div>
+        `).join('')}
+      </div>
     </div>
   `;
 }
@@ -244,9 +283,9 @@ async function renderGraph() {
 }
 
 function scoreColor(score) {
-  if (score >= 7) return '#f85149';
-  if (score >= 4) return '#d29922';
-  return '#3fb950';
+  if (score >= 7) return '#ff2d6b';
+  if (score >= 4) return '#ffb020';
+  return '#2de0c8';
 }
 
 function drawGraph(scan) {
@@ -291,7 +330,7 @@ function drawGraph(scan) {
     .selectAll('line')
     .data(links)
     .join('line')
-    .attr('stroke', 'rgba(88,166,255,0.25)')
+    .attr('stroke', 'rgba(255,59,59,0.25)')
     .attr('stroke-width', 1.2);
 
   const node = g.append('g')
@@ -300,7 +339,7 @@ function drawGraph(scan) {
     .join('circle')
     .attr('class', 'graph-node')
     .attr('r', d => d.isRoot ? 16 : 6 + Math.max(d.stage1_score, d.s2_fake_score))
-    .attr('fill', d => d.isRoot ? '#58a6ff' : scoreColor(Math.max(d.stage1_score, d.s2_fake_score)))
+    .attr('fill', d => d.isRoot ? '#ff3b3b' : scoreColor(Math.max(d.stage1_score, d.s2_fake_score)))
     .attr('stroke', d => d.isRoot ? '#fff' : 'rgba(0,0,0,0.3)')
     .attr('stroke-width', d => d.isRoot ? 2 : 0.5)
     .style('cursor', 'none')
@@ -318,7 +357,7 @@ function drawGraph(scan) {
     .join('text')
     .text(d => d.name)
     .attr('font-size', 9)
-    .attr('fill', '#8b949e')
+    .attr('fill', '#b08888')
     .attr('dx', 10)
     .attr('dy', 3)
     .style('pointer-events', 'none');
@@ -679,8 +718,8 @@ async function renderThreats() {
       ${order.map(key => `
         <div style="margin-bottom:18px;">
           <div style="display:flex; justify-content:space-between; align-items:center; cursor:none;" onclick="toggleThreatBucket('${key.replace(/'/g, "\\'")}')">
-            <strong>${key}${key === 'UNKNOWN' ? '' : ''} <span style="color:var(--dim); font-weight:normal; font-size:12px;">— ${data.definitions[key.startsWith('T1/T4') ? 'T4' : key] || 'Not classifiable from current signals'}</span></strong>
-            <span class="tag" style="background:rgba(88,166,255,0.12); color:var(--accent);">${data.buckets[key].length} scan(s)</span>
+            <strong>${key} <span style="color:var(--dim); font-weight:normal; font-size:12px;">— ${data.definitions[key.startsWith('T1/T4') ? 'T4' : key] || 'Not classifiable from current signals'}</span></strong>
+            <span class="tag" style="background:rgba(255,59,59,0.12); color:var(--accent);">${data.buckets[key].length} scan(s)</span>
           </div>
           <div id="bucket-${cssSafe(key)}" class="node-list" style="display:none; margin-top:8px;">
             ${data.buckets[key].length === 0 ? '<em>No scans in this category.</em>' : data.buckets[key].map(s => `
@@ -719,11 +758,10 @@ function drawThreatRadar(buckets, order) {
   const maxCount = Math.max(1, ...counts);
   const angleStep = (Math.PI * 2) / labels.length;
 
-  // grid rings
   for (let r = 1; r <= 4; r++) {
     svg.append('circle')
       .attr('cx', cx).attr('cy', cy).attr('r', (radius / 4) * r)
-      .attr('fill', 'none').attr('stroke', 'rgba(88,166,255,0.12)');
+      .attr('fill', 'none').attr('stroke', 'rgba(255,59,59,0.12)');
   }
 
   const points = labels.map((label, i) => {
@@ -739,19 +777,18 @@ function drawThreatRadar(buckets, order) {
     };
   });
 
-  // spokes
   labels.forEach((label, i) => {
     const angle = i * angleStep - Math.PI / 2;
     svg.append('line')
       .attr('x1', cx).attr('y1', cy)
       .attr('x2', cx + Math.cos(angle) * radius).attr('y2', cy + Math.sin(angle) * radius)
-      .attr('stroke', 'rgba(88,166,255,0.15)');
+      .attr('stroke', 'rgba(255,59,59,0.15)');
   });
 
   const lineGen = d3.line().x(d => d.x).y(d => d.y).curve(d3.curveLinearClosed);
   svg.append('path')
     .attr('d', lineGen(points))
-    .attr('fill', 'rgba(248,81,73,0.15)')
+    .attr('fill', 'rgba(255,45,107,0.15)')
     .attr('stroke', 'var(--block)')
     .attr('stroke-width', 1.5);
 
@@ -759,7 +796,7 @@ function drawThreatRadar(buckets, order) {
     .data(points)
     .join('circle')
     .attr('cx', d => d.x).attr('cy', d => d.y).attr('r', 3)
-    .attr('fill', '#f85149');
+    .attr('fill', '#ff2d6b');
 
   svg.selectAll('.radar-label')
     .data(points)
@@ -767,7 +804,7 @@ function drawThreatRadar(buckets, order) {
     .attr('x', d => d.labelX).attr('y', d => d.labelY)
     .attr('text-anchor', 'middle')
     .attr('font-size', 11)
-    .attr('fill', '#8b949e')
+    .attr('fill', '#b08888')
     .text(d => `${d.label} (${d.count})`);
 }
 
@@ -793,19 +830,41 @@ async function renderSettings() {
   document.getElementById('btn-on').onclick = async () => {
     const r = await fetch('/api/config/shieldmax/on', { method: 'POST' });
     const d = await r.json();
+    const wasOff = !document.getElementById('btn-on').classList.contains('active');
     updateToggleUI(d.shieldmax_default);
     document.getElementById('config-status').textContent = 'Saved.';
+    if (wasOff && d.shieldmax_default) playParanoidAnimation(true);
   };
   document.getElementById('btn-off').onclick = async () => {
     const r = await fetch('/api/config/shieldmax/off', { method: 'POST' });
     const d = await r.json();
+    const wasOn = document.getElementById('btn-on').classList.contains('active');
     updateToggleUI(d.shieldmax_default);
     document.getElementById('config-status').textContent = 'Saved.';
+    if (wasOn && !d.shieldmax_default) playParanoidAnimation(false);
   };
 }
 function updateToggleUI(isOn) {
   document.getElementById('btn-on').classList.toggle('active', isOn);
   document.getElementById('btn-off').classList.toggle('active', !isOn);
+}
+
+function playParanoidAnimation(turningOn) {
+  const overlay = document.getElementById('paranoid-overlay');
+  overlay.innerHTML = `
+    <div class="scan-line"></div>
+    <div class="vignette"></div>
+    <div class="paranoid-text">${turningOn ? 'PARANOID MODE ENGAGED' : 'PARANOID MODE DISENGAGED'}</div>
+  `;
+  overlay.classList.toggle('off', !turningOn);
+  overlay.classList.add('active');
+
+  pulseParticleIntensity(turningOn ? 2.6 : 1.4, 1800);
+
+  setTimeout(() => {
+    overlay.classList.remove('active');
+    overlay.innerHTML = '';
+  }, 1800);
 }
 
 // ---------- Command palette ----------

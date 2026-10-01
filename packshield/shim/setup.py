@@ -12,20 +12,25 @@ a manifest." These pass through untouched, with a visible warning.
 
 ALSO: `python -m pip install <pkg>` is NOT interceptable by any PATH
 shim on `pip` -- that invocation runs python.exe, never touches
-anything named `pip`. Inherent limitation of PATH shimming, not fixable.
+anything named `pip`. Inherent limitation of PATH shimming, not fixable
+by this design.
 
 TWO MECHANISMS, both installed together:
 1. .cmd files in ~/.packshield/shims, added to User PATH. Works in shells
    where User PATH is searched before the real binaries' location.
-2. PowerShell profile functions (install_profile_functions). REQUIRED
-   for reliability on Windows: Node.js's installer adds itself to
-   SYSTEM PATH, which Windows searches before User PATH regardless of
-   string order -- meaning mechanism 1 alone silently loses to the real
-   npm on most Windows setups. PowerShell resolves profile-defined
-   functions before ever searching PATH, sidestepping that problem
-   entirely, with no admin rights needed. LIMITATION: only works inside
-   PowerShell -- cmd.exe or a raw Start-Process bypassing the profile
-   is not covered by this mechanism.
+2. PowerShell profile functions. REQUIRED for reliability on Windows:
+   Node.js's installer adds itself to SYSTEM PATH, which Windows searches
+   before User PATH regardless of string order -- meaning mechanism 1
+   alone silently loses to the real npm on most Windows setups.
+   PowerShell resolves profile-defined functions before ever searching
+   PATH, sidestepping that problem entirely, with no admin rights needed.
+   LIMITATION: only works inside PowerShell -- cmd.exe or a raw
+   Start-Process bypassing the profile is not covered by this mechanism.
+
+Also installs a standalone `shieldmax` PowerShell function, so
+`shieldmax npm install <pkg>` / `shieldmax pip install <pkg>` works as a
+prefix command, in addition to the existing `npm install <pkg>
+--shieldmax` suffix-flag form handled inside _shim_intercept.
 """
 
 import json
@@ -53,6 +58,16 @@ function npm {{
 }}
 function pip {{
     packshield _shim_intercept pip @args
+}}
+function shieldmax {{
+    param(
+        [Parameter(Mandatory=$true, Position=0)]
+        [ValidateSet("npm", "pip")]
+        [string]$pm,
+        [Parameter(ValueFromRemainingArguments=$true)]
+        [string[]]$rest
+    )
+    packshield _shim_intercept $pm @rest --shieldmax
 }}
 {marker_end}
 """
@@ -157,20 +172,32 @@ def get_real_binary(pm: str) -> str | None:
 
 def install_profile_functions() -> tuple[bool, str]:
     """Mechanism 2: PowerShell profile functions -- the one that actually
-    makes interception reliable on Windows. See module docstring."""
+    makes interception reliable on Windows. Also installs the standalone
+    `shieldmax` prefix command (see module docstring)."""
     profile_path = _get_profile_path()
     profile_path.parent.mkdir(parents=True, exist_ok=True)
 
     existing = profile_path.read_text(encoding="utf-8") if profile_path.exists() else ""
     if PROFILE_MARKER_START in existing:
-        return True, f"PowerShell profile already has PackShield functions ({profile_path})."
+        # Already installed from an earlier version -- replace the block
+        # in place so re-running `packshield shim install` after this
+        # update actually picks up the new `shieldmax` function too.
+        start = existing.index(PROFILE_MARKER_START)
+        end = existing.index(PROFILE_MARKER_END) + len(PROFILE_MARKER_END)
+        block = PROFILE_FUNCTIONS_TEMPLATE.format(marker_start=PROFILE_MARKER_START, marker_end=PROFILE_MARKER_END)
+        new_content = existing[:start] + block.strip() + existing[end:]
+        profile_path.write_text(new_content, encoding="utf-8")
+        return True, (
+            f"Updated PackShield functions (including the new `shieldmax` command) in your PowerShell profile: {profile_path}\n"
+            f"IMPORTANT: close and reopen PowerShell (or run '. $PROFILE') for this to take effect."
+        )
 
     block = PROFILE_FUNCTIONS_TEMPLATE.format(marker_start=PROFILE_MARKER_START, marker_end=PROFILE_MARKER_END)
     with open(profile_path, "a", encoding="utf-8") as f:
         f.write("\n" + block)
 
     return True, (
-        f"Added npm/pip override functions to your PowerShell profile: {profile_path}\n"
+        f"Added npm/pip override functions and the `shieldmax` command to your PowerShell profile: {profile_path}\n"
         f"IMPORTANT: close and reopen PowerShell (or run '. $PROFILE') for this to take effect.\n"
         f"NOTE: this only intercepts npm/pip inside PowerShell -- cmd.exe and other shells "
         f"are not covered by this mechanism."
