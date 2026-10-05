@@ -177,11 +177,14 @@ def _source_status(row: dict, relative_file: str, status: str) -> dict:
 def run(index: Path, npm_root: Path, pypi_root: Path, output: Path, model_name: str,
         limit: int | None = None, batch_size: int = 50, code_length: int = 256,
         data_flow_length: int = 64, max_file_bytes: int = 2 * 1024 * 1024,
-        file_timeout_seconds: float = 20, worker_startup_timeout: float = 180) -> dict:
+        file_timeout_seconds: float = 20, worker_startup_timeout: float = 180,
+        flush_every: int = 100) -> dict:
     if max_file_bytes < 1:
         raise ValueError("max_file_bytes must be positive")
     if file_timeout_seconds <= 0 or worker_startup_timeout <= 0:
         raise ValueError("worker timeouts must be positive")
+    if flush_every < 1:
+        raise ValueError("flush_every must be positive")
 
     rows = [json.loads(line) for line in index.read_text(encoding="utf-8").splitlines() if line.strip()]
     rows = [row for row in rows if row.get("source_available")]
@@ -194,55 +197,70 @@ def run(index: Path, npm_root: Path, pypi_root: Path, output: Path, model_name: 
     with FeatureWorker(model_name, code_length, data_flow_length,
                        worker_startup_timeout) as worker:
         with opener(output, "wt", encoding="utf-8", newline="\n") as stream:
+            pending_flush = 0
+
+            def write_record(record: dict, emitted: set[tuple[str, str]]) -> None:
+                nonlocal pending_flush
+                group_id = record.get("group_id", "")
+                key = (group_id, record.get("relative_file") or record.get("status", ""))
+                if key in emitted:
+                    return
+                emitted.add(key)
+                if record.get("status") == "no_supported_source":
+                    summary["packages_without_supported_source"] += 1
+                if "relative_file" in record:
+                    summary["files"] += 1
+                summary[record["status"]] += 1
+                stream.write(json.dumps(record, ensure_ascii=False) + "\n")
+                pending_flush += 1
+                if pending_flush >= flush_every:
+                    stream.flush()
+                    pending_flush = 0
+
             for ecosystem, repo_root in (("npm", npm_root), ("pypi", pypi_root)):
                 ecosystem_rows = [row for row in rows if row["ecosystem"] == ecosystem]
                 for start in range(0, len(ecosystem_rows), batch_size):
                     batch = ecosystem_rows[start:start + batch_size]
-                    records = []
                     seen_packages = set()
+                    emitted: set[tuple[str, str]] = set()
                     try:
                         for row, relative_file, source, source_status in iter_git_package_source_files(
                                 repo_root, batch, max_file_bytes=max_file_bytes):
                             seen_packages.add(row["group_id"])
                             if source_status:
-                                records.append(_source_status(row, relative_file, source_status))
+                                write_record(_source_status(row, relative_file, source_status), emitted)
                             elif source is not None:
-                                records.append(worker.process_file(row, relative_file, source,
-                                                                  file_timeout_seconds))
+                                write_record(worker.process_file(row, relative_file, source,
+                                                                 file_timeout_seconds), emitted)
                         for row in batch:
                             if row["group_id"] not in seen_packages:
-                                records.append({"group_id": row["group_id"], "label": row["label"],
-                                                "ecosystem": ecosystem,
-                                                "status": "no_supported_source"})
+                                write_record({"group_id": row["group_id"], "label": row["label"],
+                                              "ecosystem": ecosystem,
+                                              "status": "no_supported_source"}, emitted)
                     except (GitSourceError, OSError, tarfile.TarError) as exc:
                         summary["batch_archive_errors"] += 1
-                        records = []
                         for row in batch:
                             try:
-                                package_records = []
+                                package_seen = False
                                 for item, relative, source, source_status in iter_git_package_source_files(
                                         repo_root, [row], max_file_bytes=max_file_bytes):
+                                    package_seen = True
                                     if source_status:
-                                        package_records.append(_source_status(item, relative, source_status))
+                                        write_record(_source_status(item, relative, source_status), emitted)
                                     elif source is not None:
-                                        package_records.append(worker.process_file(
-                                            item, relative, source, file_timeout_seconds))
-                                records.extend(package_records or [{"group_id": row["group_id"],
-                                                                    "label": row["label"],
-                                                                    "ecosystem": ecosystem,
-                                                                    "status": "no_supported_source"}])
+                                        write_record(worker.process_file(
+                                            item, relative, source, file_timeout_seconds), emitted)
+                                if not package_seen:
+                                    write_record({"group_id": row["group_id"], "label": row["label"],
+                                                  "ecosystem": ecosystem,
+                                                  "status": "no_supported_source"}, emitted)
                             except (GitSourceError, OSError, tarfile.TarError) as package_exc:
-                                records.append({"group_id": row["group_id"], "label": row["label"],
-                                                "ecosystem": ecosystem, "status": "source_error",
-                                                "error": str(package_exc or exc)[:300]})
+                                write_record({"group_id": row["group_id"], "label": row["label"],
+                                              "ecosystem": ecosystem, "status": "source_error",
+                                              "error": str(package_exc or exc)[:300]}, emitted)
                     summary["packages"] += len(batch)
-                    for record in records:
-                        if record.get("status") == "no_supported_source":
-                            summary["packages_without_supported_source"] += 1
-                        if "relative_file" in record:
-                            summary["files"] += 1
-                        summary[record["status"]] += 1
-                        stream.write(json.dumps(record, ensure_ascii=False) + "\n")
+                    stream.flush()
+                    pending_flush = 0
                     completed = min(start + len(batch), len(ecosystem_rows))
                     print(f"{ecosystem}: {completed}/{len(ecosystem_rows)} packages; "
                           f"{summary['files']} source files emitted", file=sys.stderr, flush=True)
@@ -263,11 +281,13 @@ def main() -> None:
     parser.add_argument("--max-file-bytes", type=int, default=2 * 1024 * 1024)
     parser.add_argument("--file-timeout-seconds", type=float, default=20)
     parser.add_argument("--worker-startup-timeout", type=float, default=180)
+    parser.add_argument("--flush-every", type=int, default=100,
+                        help="Flush compressed output after this many feature records")
     args = parser.parse_args()
     result = run(args.index, args.npm_root, args.pypi_root, args.output, args.model_name,
                  args.limit, args.batch_size, args.code_length, args.data_flow_length,
                  args.max_file_bytes, args.file_timeout_seconds,
-                 args.worker_startup_timeout)
+                 args.worker_startup_timeout, args.flush_every)
     print(json.dumps(result, indent=2))
 
 

@@ -1,0 +1,17 @@
+{
+  "selected_packages": 2,
+  "selected_per_ecosystem_label": {
+    "npm_malicious": 0,
+    "npm_benign": 0,
+    "pypi_malicious": 1,
+    "pypi_benign": 1
+  },
+  "per_label_target": 1,
+  "seed": 20261004,
+  "features_output": "data\\s2_graphcodebert_pypi_probe_features.jsonl.gz",
+  "extraction": {
+    "packages": 2,
+    "files": 41,
+    "ok": 41
+  }
+}
