@@ -1,0 +1,787 @@
+{
+  "created_utc": "2026-10-06T09:09:38.960694+00:00",
+  "split_rows": 25426,
+  "split_rows_by_ecosystem": {
+    "npm": 14817,
+    "pypi": 10609
+  },
+  "source_available_rows": 25425,
+  "source_available_by_ecosystem": {
+    "npm": 14817,
+    "pypi": 10608
+  },
+  "historically_reconciled_before_current_queue": 4296,
+  "historically_reconciled_by_ecosystem": {
+    "npm": 4296
+  },
+  "stable_package_checkpoint_ids": 8859,
+  "stable_checkpoint_ids_in_source_index": 5883,
+  "stable_checkpoint_ids_by_ecosystem": {
+    "npm": 8859
+  },
+  "stable_completed_unique_packages": 10179,
+  "stable_completed_by_ecosystem": {
+    "npm": 10179
+  },
+  "active_batch_one_latest_package_counters_not_in_merge": {
+    "npm": 56
+  },
+  "active_batch_one_logs": {
+    "shard_00.log": {
+      "npm": 52
+    },
+    "shard_01.log": {
+      "npm": 276
+    },
+    "shard_02.log": {
+      "npm": 56
+    }
+  },
+  "source_available_remaining_after_stable_snapshot": {
+    "4638": 1,
+    "10608": 1
+  },
+  "feature_records_merged": 122494,
+  "feature_records_by_ecosystem": {
+    "npm": 122494
+  },
+  "feature_status_counts": {
+    "npm:ok": 113354,
+    "npm:parse_timeout": 35,
+    "npm:file_too_large": 19,
+    "npm:parse_error": 9085,
+    "npm:worker_crash": 1
+  },
+  "feature_records_by_label": {
+    "npm:malicious": 75301,
+    "npm:benign": 47193
+  },
+  "completed_packages_with_feature_records": 9279,
+  "completed_packages_without_feature_records": 900,
+  "deduplicated_identical_records": 147080,
+  "conflicting_duplicate_keys": 1057,
+  "malformed_or_metadata_mismatched_records_skipped": 2246,
+  "valid_records_for_uncompleted_packages_skipped": 15165,
+  "gzip_read_errors_after_salvaging_valid_prefix": [
+    {
+      "file": "s2_graphcodebert_direct_pilot_features.incomplete.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320\\shard_02.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_repair_01_03\\shard_01.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_repair_01_03\\shard_02.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_repair_01_03_resume\\shard_01.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_repair_01_03_resume\\shard_01.pre_stall_resplit.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_repair_01_03_resume\\shard_02.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_repair_01_03_resume\\shard_02.pre_stall_resplit.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_streaming\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_streaming\\shard_01.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_streaming\\shard_01.pre_repair.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_streaming\\shard_02.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_streaming\\shard_02.pre_repair.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_streaming\\shard_03.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_streaming\\shard_03.pre_repair.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v10\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v10\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v11\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v11\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v12\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v12\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v13\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v13\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v14\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v14\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v15\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v15\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v16\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v16\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v17\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v17\\shard_00.speed_restart_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v3\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v4\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v5\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v6\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v6\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v7\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v7\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v8\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v8\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v9\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v9\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v1\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v1\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v2\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v3\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v4\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v5\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v6\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v6\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v7\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v11\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v11\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v12\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v12\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v13\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v13\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v14\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v14\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v15\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v15\\shard_00.speed_restart_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v2\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v3\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v4\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v5\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v6\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v6\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v7\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v7\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v8\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v8\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v9\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v9\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v1\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v1\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v2\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v3\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v4\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v5\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v6\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v11\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v11\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v12\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v12\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v13\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v13\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v14\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v14\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v15\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v15\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v16\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v16\\shard_00.speed_restart_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v3\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v4\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v5\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v6\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v6\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v7\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v7\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v8\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v8\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v9\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v9\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v1\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v1\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v2\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v3\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v4\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v5\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v10\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v10\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v11\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v11\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v13\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v13\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v14\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v14\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v15\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v15\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v16\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v16\\shard_00.speed_restart_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v2\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v3\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v4\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v5\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v6\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v6\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v7\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v7\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v8\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v8\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v9\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v9\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v1\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v1\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v2\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v3\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v4\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v5\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard_01.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard_01.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard_02.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard_02.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard_03.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard_03.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_malwarebench_graphcodebert_features.full_run_interrupted.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_malwarebench_graphcodebert_features.interrupted.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_malwarebench_graphcodebert_features_remaining.interrupted_0520.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    }
+  ],
+  "feature_sources_read": 280,
+  "feature_output": "features_completed.jsonl.gz",
+  "package_ledger": "completed_packages.jsonl",
+  "active_batch_one_output_excluded": true
+}

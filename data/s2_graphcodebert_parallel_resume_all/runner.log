@@ -1,0 +1,69 @@
+Started shard 00: 5282 packages; PID 11932
+Started shard 01: 5282 packages; PID 21004
+Started shard 02: 5283 packages; PID 3724
+Started shard 03: 5282 packages; PID 664
+[shard 00] Traceback (most recent call last):
+[shard 00]   File "C:\Users\Veeresh\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+[shard 00]     return _run_code(code, main_globals, None,
+[shard 00]   File "C:\Users\Veeresh\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+[shard 00]     exec(code, run_globals)
+[shard 00]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 295, in <module>
+[shard 00]     main()
+[shard 00]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 287, in main
+[shard 00]     result = run(args.index, args.npm_root, args.pypi_root, args.output, args.model_name,
+[shard 00]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 197, in run
+[shard 00]     with FeatureWorker(model_name, code_length, data_flow_length,
+[shard 00]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 35, in __init__
+[shard 00]     self._start()
+[shard 00]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 72, in _start
+[shard 00]     raise FeatureWorkerError(f"S2 parser worker exited during startup (code {code})")
+[shard 00] __main__.FeatureWorkerError: S2 parser worker exited during startup (code None)
+[shard 01] Traceback (most recent call last):
+[shard 01]   File "C:\Users\Veeresh\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+[shard 01]     return _run_code(code, main_globals, None,
+[shard 01]   File "C:\Users\Veeresh\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+[shard 01]     exec(code, run_globals)
+[shard 01]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 295, in <module>
+[shard 01]     main()
+[shard 01]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 287, in main
+[shard 01]     result = run(args.index, args.npm_root, args.pypi_root, args.output, args.model_name,
+[shard 01]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 197, in run
+[shard 01]     with FeatureWorker(model_name, code_length, data_flow_length,
+[shard 01]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 35, in __init__
+[shard 01]     self._start()
+[shard 01]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 72, in _start
+[shard 01]     raise FeatureWorkerError(f"S2 parser worker exited during startup (code {code})")
+[shard 01] __main__.FeatureWorkerError: S2 parser worker exited during startup (code None)
+[shard 02] Traceback (most recent call last):
+[shard 02]   File "C:\Users\Veeresh\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+[shard 02]     return _run_code(code, main_globals, None,
+[shard 02]   File "C:\Users\Veeresh\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+[shard 02]     exec(code, run_globals)
+[shard 02]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 295, in <module>
+[shard 02]     main()
+[shard 02]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 287, in main
+[shard 02]     result = run(args.index, args.npm_root, args.pypi_root, args.output, args.model_name,
+[shard 02]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 197, in run
+[shard 02]     with FeatureWorker(model_name, code_length, data_flow_length,
+[shard 02]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 35, in __init__
+[shard 02]     self._start()
+[shard 02]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 72, in _start
+[shard 02]     raise FeatureWorkerError(f"S2 parser worker exited during startup (code {code})")
+[shard 02] __main__.FeatureWorkerError: S2 parser worker exited during startup (code None)
+[shard 03] Traceback (most recent call last):
+[shard 03]   File "C:\Users\Veeresh\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+[shard 03]     return _run_code(code, main_globals, None,
+[shard 03]   File "C:\Users\Veeresh\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+[shard 03]     exec(code, run_globals)
+[shard 03]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 295, in <module>
+[shard 03]     main()
+[shard 03]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 287, in main
+[shard 03]     result = run(args.index, args.npm_root, args.pypi_root, args.output, args.model_name,
+[shard 03]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 197, in run
+[shard 03]     with FeatureWorker(model_name, code_length, data_flow_length,
+[shard 03]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 35, in __init__
+[shard 03]     self._start()
+[shard 03]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 72, in _start
+[shard 03]     raise FeatureWorkerError(f"S2 parser worker exited during startup (code {code})")
+[shard 03] __main__.FeatureWorkerError: S2 parser worker exited during startup (code None)
+Shard failures: [(0, 1), (1, 1), (2, 1), (3, 1)]; partial shard files and logs were preserved

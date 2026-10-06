@@ -1,0 +1,93 @@
+{
+  "created_utc": "2026-10-06T07:59:03.705462+00:00",
+  "source_index_rows": 21129,
+  "all_runs_unique_checkpoint_group_ids": 8859,
+  "confirmed_completed_group_ids_excluded": 5883,
+  "confirmed_completed_by_ecosystem_in_current_index": {
+    "npm": 5883
+  },
+  "outstanding_unique_packages": 15246,
+  "batch_count": 5,
+  "parallel_shards_per_batch": 3,
+  "parser_workers_per_shard": 1,
+  "archive_batch_size": 4,
+  "completion_basis": "last package-level counters in shard logs",
+  "cost_estimate": "max(1,total_file) + 8 * max(0, package_size MiB)",
+  "batches": [
+    {
+      "batch": 1,
+      "input": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\batches\\batch_01\\input.jsonl",
+      "launcher": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\batches\\batch_01\\run_batch_01.ps1",
+      "packages": 3049,
+      "estimated_work_units": 59958557.42,
+      "ecosystems": {
+        "npm": 927,
+        "pypi": 2122
+      },
+      "labels": {
+        "malicious": 1327,
+        "benign": 1722
+      }
+    },
+    {
+      "batch": 2,
+      "input": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\batches\\batch_02\\input.jsonl",
+      "launcher": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\batches\\batch_02\\run_batch_02.ps1",
+      "packages": 3049,
+      "estimated_work_units": 59958557.37,
+      "ecosystems": {
+        "pypi": 2122,
+        "npm": 927
+      },
+      "labels": {
+        "benign": 1722,
+        "malicious": 1327
+      }
+    },
+    {
+      "batch": 3,
+      "input": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\batches\\batch_03\\input.jsonl",
+      "launcher": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\batches\\batch_03\\run_batch_03.ps1",
+      "packages": 3050,
+      "estimated_work_units": 59958562.91,
+      "ecosystems": {
+        "npm": 928,
+        "pypi": 2122
+      },
+      "labels": {
+        "malicious": 1327,
+        "benign": 1723
+      }
+    },
+    {
+      "batch": 4,
+      "input": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\batches\\batch_04\\input.jsonl",
+      "launcher": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\batches\\batch_04\\run_batch_04.ps1",
+      "packages": 3049,
+      "estimated_work_units": 59958558.38,
+      "ecosystems": {
+        "npm": 928,
+        "pypi": 2121
+      },
+      "labels": {
+        "malicious": 1327,
+        "benign": 1722
+      }
+    },
+    {
+      "batch": 5,
+      "input": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\batches\\batch_05\\input.jsonl",
+      "launcher": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\batches\\batch_05\\run_batch_05.ps1",
+      "packages": 3049,
+      "estimated_work_units": 59958558.15,
+      "ecosystems": {
+        "pypi": 2121,
+        "npm": 928
+      },
+      "labels": {
+        "benign": 1722,
+        "malicious": 1327
+      }
+    }
+  ]
+}

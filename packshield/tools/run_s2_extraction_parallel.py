@@ -17,24 +17,34 @@ import time
 from pathlib import Path
 
 
-def _estimated_files(row: dict) -> int:
+def _estimated_work(row: dict) -> float:
+    """Rough extraction cost: source-file count plus unpacked MiB weight."""
     try:
-        return max(1, int(row.get("total_file", 1)))
+        files = max(1, int(float(row.get("total_file", 1))))
     except (TypeError, ValueError):
-        return 1
+        files = 1
+    try:
+        size_mib = max(0.0, float(row.get("package_size", 0)))
+    except (TypeError, ValueError):
+        size_mib = 0.0
+    return files + 8.0 * size_mib
 
 
-def _partition(rows: list[dict], workers: int) -> list[list[dict]]:
+def _partition(rows: list[dict], workers: int,
+               deferred_group_ids: set[str] | None = None) -> list[list[dict]]:
+    deferred_group_ids = deferred_group_ids or set()
     shards: list[list[dict]] = [[] for _ in range(workers)]
-    loads = [0] * workers
-    for row in sorted(rows, key=_estimated_files, reverse=True):
+    loads = [0.0] * workers
+    for row in sorted(rows, key=lambda item: (
+            item.get("group_id") in deferred_group_ids, _estimated_work(item)), reverse=True):
         shard = min(range(workers), key=loads.__getitem__)
         shards[shard].append(row)
-        loads[shard] += _estimated_files(row)
+        loads[shard] += _estimated_work(row)
     # Balance by file volume, but start on the smaller jobs so useful results
     # are committed early instead of waiting behind the largest package.
     for shard in shards:
-        shard.sort(key=_estimated_files)
+        shard.sort(key=lambda item: (
+            item.get("group_id") in deferred_group_ids, _estimated_work(item)))
     return shards
 
 
@@ -63,7 +73,7 @@ def run(args: argparse.Namespace) -> int:
         raise SystemExit("No source_available rows found in the S2 index")
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    shards = _partition(rows, args.workers)
+    shards = _partition(rows, args.workers, set(args.defer_group_id))
     processes: list[dict] = []
     for number, shard in enumerate(shards):
         if not shard:
@@ -147,6 +157,8 @@ def main() -> None:
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--project-root", type=Path, default=Path.cwd())
     parser.add_argument("--workers", type=int, default=4)
+    parser.add_argument("--defer-group-id", action="append", default=[],
+                        help="Keep this package ID last in its shard for a later retry")
     parser.add_argument("--batch-size", type=int, default=20)
     parser.add_argument("--poll-seconds", type=float, default=30)
     parser.add_argument("--file-timeout-seconds", type=float, default=20)

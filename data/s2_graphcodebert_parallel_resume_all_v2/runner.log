@@ -1,0 +1,62 @@
+Started shard 00: 5282 packages; PID 5728
+Started shard 01: 5282 packages; PID 13760
+Started shard 02: 5283 packages; PID 10408
+Started shard 03: 5282 packages; PID 13028
+[shard 00] npm: 1/2616 packages; 1 source files emitted
+[shard 01] npm: 1/2602 packages; 1 source files emitted
+[shard 02] npm: 1/2671 packages; 1 source files emitted
+[shard 03] npm: 1/2632 packages; 1 source files emitted
+[shard 00] npm: 50/2616 packages; 41 source files emitted
+[shard 01] npm: 50/2602 packages; 48 source files emitted
+[shard 02] npm: 50/2671 packages; 45 source files emitted
+[shard 03] npm: 50/2632 packages; 42 source files emitted
+[shard 01] npm: 100/2602 packages; 100 source files emitted
+[shard 03] npm: 100/2632 packages; 96 source files emitted
+[shard 00] npm: 100/2616 packages; 94 source files emitted
+[shard 02] npm: 100/2671 packages; 99 source files emitted
+[shard 00] npm: 150/2616 packages; 145 source files emitted
+[shard 01] npm: 150/2602 packages; 153 source files emitted
+[shard 02] npm: 150/2671 packages; 148 source files emitted
+[shard 03] npm: 150/2632 packages; 152 source files emitted
+[shard 00] npm: 200/2616 packages; 205 source files emitted
+[shard 01] npm: 200/2602 packages; 208 source files emitted
+[shard 03] npm: 200/2632 packages; 207 source files emitted
+[shard 02] npm: 200/2671 packages; 206 source files emitted
+[shard 00] npm: 250/2616 packages; 268 source files emitted
+[shard 01] npm: 250/2602 packages; 271 source files emitted
+[shard 02] npm: 250/2671 packages; 270 source files emitted
+[shard 03] npm: 250/2632 packages; 267 source files emitted
+[shard 00] npm: 300/2616 packages; 351 source files emitted
+[shard 01] npm: 300/2602 packages; 359 source files emitted
+[shard 03] npm: 300/2632 packages; 355 source files emitted
+[shard 02] npm: 300/2671 packages; 352 source files emitted
+[shard 00] npm: 350/2616 packages; 413 source files emitted
+[shard 01] npm: 350/2602 packages; 422 source files emitted
+[shard 02] npm: 350/2671 packages; 414 source files emitted
+[shard 03] npm: 350/2632 packages; 419 source files emitted
+[shard 01] npm: 400/2602 packages; 511 source files emitted
+[shard 03] npm: 400/2632 packages; 493 source files emitted
+[shard 00] npm: 400/2616 packages; 496 source files emitted
+[shard 02] npm: 400/2671 packages; 484 source files emitted
+[shard 03] npm: 450/2632 packages; 553 source files emitted
+[shard 00] npm: 450/2616 packages; 549 source files emitted
+[shard 01] npm: 450/2602 packages; 569 source files emitted
+[shard 02] npm: 450/2671 packages; 541 source files emitted
+[shard 01] npm: 500/2602 packages; 646 source files emitted
+[shard 03] npm: 500/2632 packages; 620 source files emitted
+[shard 00] npm: 500/2616 packages; 625 source files emitted
+[shard 02] npm: 500/2671 packages; 610 source files emitted
+[shard 03] npm: 550/2632 packages; 711 source files emitted
+[shard 00] npm: 550/2616 packages; 702 source files emitted
+[shard 01] npm: 550/2602 packages; 757 source files emitted
+[shard 02] npm: 550/2671 packages; 685 source files emitted
+[shard 03] npm: 600/2632 packages; 862 source files emitted
+[shard 00] npm: 600/2616 packages; 849 source files emitted
+[shard 02] npm: 600/2671 packages; 857 source files emitted
+[shard 00] npm: 650/2616 packages; 958 source files emitted
+[shard 03] npm: 650/2632 packages; 947 source files emitted
+[shard 03] npm: 700/2632 packages; 1055 source files emitted
+Shard 01 exited with code 1
+Shard 02 exited with code 1
+Shard 00 exited with code 1
+Shard failures: [(0, 1), (1, 1), (2, 1), (3, 1)]; partial shard files and logs were preserved

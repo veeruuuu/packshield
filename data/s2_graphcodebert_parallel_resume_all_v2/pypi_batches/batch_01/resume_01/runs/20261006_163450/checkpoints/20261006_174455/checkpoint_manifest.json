@@ -1,0 +1,59 @@
+{
+  "checkpoint_time": "2026-10-06 17:44 local",
+  "source_run": "data\\s2_graphcodebert_parallel_resume_all_v2\\pypi_batches\\batch_01\\resume_01\\runs\\20261006_163450",
+  "input_rows": 2264,
+  "shards": [
+    {
+      "shard": 0,
+      "checkpoint": {
+        "completed": 80,
+        "total": 756
+      },
+      "recoverable_json_records": 182,
+      "unique_group_ids_in_feature_rows": 80,
+      "statuses": {
+        "ok": 177,
+        "parse_error": 3,
+        "no_supported_source": 2
+      },
+      "gzip_read_error": "EOFError: Compressed file ended before the end-of-stream marker was reached",
+      "snapshot": "shard_00.jsonl.gz.checkpoint_20261006_174455.bak"
+    },
+    {
+      "shard": 1,
+      "checkpoint": {
+        "completed": 116,
+        "total": 756
+      },
+      "recoverable_json_records": 283,
+      "unique_group_ids_in_feature_rows": 116,
+      "statuses": {
+        "ok": 273,
+        "no_supported_source": 6,
+        "parse_error": 4
+      },
+      "gzip_read_error": "EOFError: Compressed file ended before the end-of-stream marker was reached",
+      "snapshot": "shard_01.jsonl.gz.checkpoint_20261006_174455.bak"
+    },
+    {
+      "shard": 2,
+      "checkpoint": {
+        "completed": 64,
+        "total": 752
+      },
+      "recoverable_json_records": 121,
+      "unique_group_ids_in_feature_rows": 64,
+      "statuses": {
+        "ok": 120,
+        "parse_error": 1
+      },
+      "gzip_read_error": "EOFError: Compressed file ended before the end-of-stream marker was reached",
+      "snapshot": "shard_02.jsonl.gz.checkpoint_20261006_174455.bak"
+    }
+  ],
+  "recoverable_records_written": 586,
+  "unique_group_ids_in_records": 260,
+  "validated_records_to_eof": 586,
+  "output": "data\\s2_graphcodebert_parallel_resume_all_v2\\pypi_batches\\batch_01\\resume_01\\runs\\20261006_163450\\checkpoints\\20261006_174455\\features_checkpoint.jsonl.gz",
+  "active_extraction_was_left_running": true
+}

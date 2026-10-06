@@ -1,0 +1,18 @@
+Started shard 00: 3858 packages; PID 3976
+[shard 00] npm: 100/1208 packages; 1047 source files emitted
+[shard 00] npm: 200/1208 packages; 1725 source files emitted
+[shard 00] npm: 300/1208 packages; 2745 source files emitted
+[shard 00] npm: 400/1208 packages; 4525 source files emitted
+[shard 00] npm: 500/1208 packages; 6582 source files emitted
+[shard 00] Exception in thread s2-feature-worker-reader:
+[shard 00] Traceback (most recent call last):
+[shard 00]   File "C:\Users\Veeresh\AppData\Local\Programs\Python\Python310\lib\threading.py", line 1009, in _bootstrap_inner
+[shard 00]     self.run()
+[shard 00]   File "C:\Users\Veeresh\AppData\Local\Programs\Python\Python310\lib\threading.py", line 946, in run
+[shard 00]     self._target(*self._args, **self._kwargs)
+[shard 00]   File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 53, in read_messages
+[shard 00]     for line in process.stdout:
+[shard 00]   File "C:\Users\Veeresh\AppData\Local\Programs\Python\Python310\lib\codecs.py", line 322, in decode
+[shard 00]     (result, consumed) = self._buffer_decode(data, self.errors, final)
+[shard 00] UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe3 in position 2586: invalid continuation byte
+[shard 00] npm: 600/1208 packages; 9891 source files emitted

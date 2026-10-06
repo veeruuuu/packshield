@@ -1,0 +1,1602 @@
+{
+  "created_utc": "2026-10-06T09:17:56.719804+00:00",
+  "split_rows": 25426,
+  "split_rows_by_ecosystem": {
+    "npm": 14817,
+    "pypi": 10609
+  },
+  "source_available_rows": 25425,
+  "source_available_by_ecosystem": {
+    "npm": 14817,
+    "pypi": 10608
+  },
+  "prequeue_reconciled_complete": 4296,
+  "prequeue_completed_by_ecosystem": {
+    "npm": 4296
+  },
+  "saved_log_checkpoint_ids": 8859,
+  "saved_log_checkpoint_ids_by_ecosystem": {
+    "npm": 8859
+  },
+  "saved_log_ids_overlapping_prequeue": 2976,
+  "pilot_completed_ids": 56,
+  "pilot_completed_by_ecosystem": {
+    "npm": 28,
+    "pypi": 28
+  },
+  "stable_completed_unique_packages": 10215,
+  "stable_completed_by_ecosystem": {
+    "npm": 10187,
+    "pypi": 28
+  },
+  "active_batch_one_checkpoint_progress_by_shard": {
+    "shard_00.log": {
+      "npm": 52
+    },
+    "shard_01.log": {
+      "npm": 276
+    },
+    "shard_02.log": {
+      "npm": 56
+    }
+  },
+  "active_batch_one_checkpoint_progress_sum_by_ecosystem": {
+    "npm": 384
+  },
+  "active_batch_one_feature_files_excluded_from_merge": true,
+  "all_completed_including_active_checkpoint_progress": 10597,
+  "all_completed_including_active_by_ecosystem": {
+    "npm": 10569,
+    "pypi": 28
+  },
+  "source_available_remaining_after_active_progress": {
+    "npm": 4248,
+    "pypi": 10580
+  },
+  "merged_feature_records": 130445,
+  "feature_records_by_ecosystem": {
+    "npm": 128928,
+    "pypi": 1517
+  },
+  "feature_status_counts": {
+    "npm:ok": 118311,
+    "npm:parse_timeout": 35,
+    "npm:file_too_large": 20,
+    "npm:parse_error": 10561,
+    "npm:worker_crash": 1,
+    "pypi:ok": 1515,
+    "pypi:file_read_error": 2
+  },
+  "feature_records_by_label": {
+    "npm:malicious": 81444,
+    "npm:benign": 47484,
+    "pypi:benign": 1450,
+    "pypi:malicious": 67
+  },
+  "completed_packages_with_feature_records": 9315,
+  "completed_packages_without_feature_records": 900,
+  "identical_duplicate_feature_rows_skipped": 276011,
+  "conflicting_duplicate_keys": 1058,
+  "malformed_or_metadata_mismatched_rows_skipped": 2246,
+  "rows_for_not-yet-completed_packages_skipped": 808,
+  "feature_sources_read": 282,
+  "gzip_read_errors_after_prefix_recovery": [
+    {
+      "file": "s2_graphcodebert_direct_pilot_features.incomplete.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320\\shard_02.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_repair_01_03\\shard_01.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_repair_01_03\\shard_02.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_repair_01_03_resume\\shard_01.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_repair_01_03_resume\\shard_01.pre_stall_resplit.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_repair_01_03_resume\\shard_02.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_repair_01_03_resume\\shard_02.pre_stall_resplit.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_streaming\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_streaming\\shard_01.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_streaming\\shard_01.pre_repair.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_streaming\\shard_02.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_streaming\\shard_02.pre_repair.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_streaming\\shard_03.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_1320_streaming\\shard_03.pre_repair.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v10\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v10\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v11\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v11\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v12\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v12\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v13\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v13\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v14\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v14\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v15\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v15\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v16\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v16\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v17\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v17\\shard_00.speed_restart_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v3\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v4\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v5\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v6\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v6\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v7\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v7\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v8\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v8\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v9\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v9\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v1\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v1\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v2\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v3\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v4\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v5\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v6\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v6\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v7\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v11\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v11\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v12\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v12\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v13\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v13\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v14\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v14\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v15\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v15\\shard_00.speed_restart_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v2\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v3\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v4\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v5\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v6\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v6\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v7\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v7\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v8\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v8\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v9\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v9\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v1\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v1\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v2\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v3\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v4\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v5\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v6\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v11\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v11\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v12\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v12\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v13\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v13\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v14\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v14\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v15\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v15\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v16\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v16\\shard_00.speed_restart_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v3\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v4\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v5\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v6\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v6\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v7\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v7\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v8\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v8\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v9\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v9\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v1\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v1\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v2\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v3\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v4\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v5\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v10\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v10\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v11\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v11\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v13\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v13\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v14\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v14\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v15\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v15\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v16\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v16\\shard_00.speed_restart_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v2\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v3\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v4\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v5\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v6\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v6\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v7\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v7\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v8\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v8\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v9\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v9\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v1\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v1\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v2\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v3\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v4\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v5\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard_00.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard_01.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard_01.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard_02.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard_02.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard_03.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_graphcodebert_parallel_resume_all_v2\\shard_03.stall_backup.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_malwarebench_graphcodebert_features.full_run_interrupted.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_malwarebench_graphcodebert_features.interrupted.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "s2_malwarebench_graphcodebert_features_remaining.interrupted_0520.jsonl.gz",
+      "error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    }
+  ],
+  "features_file": "features_completed.jsonl.gz",
+  "package_ledger": "completed_packages.jsonl",
+  "conflicts_file": "conflicts.jsonl",
+  "package_status_records_merged": 857,
+  "package_status_record_counts": {
+    "no_supported_source": 857
+  },
+  "package_status_source_records_by_file": {
+    "s2_graphcodebert_direct_pilot_features.incomplete.jsonl.gz": 1,
+    "s2_graphcodebert_npm_pilot_features.jsonl.gz": 2,
+    "s2_malwarebench_graphcodebert_batch_0760_0780.jsonl.gz": 1,
+    "s2_malwarebench_graphcodebert_features.full_run_interrupted.jsonl.gz": 78,
+    "s2_malwarebench_graphcodebert_features.interrupted.jsonl.gz": 3,
+    "s2_malwarebench_graphcodebert_features.prefix.jsonl.gz": 78,
+    "s2_malwarebench_graphcodebert_features_remaining.interrupted_0520.jsonl.gz": 48,
+    "s2_malwarebench_graphcodebert_features_remaining.prefix.jsonl.gz": 48,
+    "s2_graphcodebert_parallel_1320_repair_01_03\\shard_01.jsonl.gz": 5,
+    "s2_graphcodebert_parallel_1320_repair_01_03_resume\\shard_01.jsonl.gz": 4,
+    "s2_graphcodebert_parallel_1320_repair_01_03_resume\\shard_01.prefix_salvaged.jsonl.gz": 4,
+    "s2_graphcodebert_parallel_1320_repair_01_03_resume\\shard_01.pre_stall_resplit.jsonl.gz": 4,
+    "s2_graphcodebert_parallel_1320_repair_01_03_resume\\shard_02.jsonl.gz": 9,
+    "s2_graphcodebert_parallel_1320_repair_01_03_resume\\shard_02.prefix_salvaged.jsonl.gz": 9,
+    "s2_graphcodebert_parallel_1320_repair_01_03_resume\\shard_02.pre_stall_resplit.jsonl.gz": 9,
+    "s2_graphcodebert_parallel_1320_streaming\\shard_00.jsonl.gz": 192,
+    "s2_graphcodebert_parallel_1320_streaming\\shard_00.prefix_salvaged.jsonl.gz": 192,
+    "s2_graphcodebert_parallel_1320_streaming\\shard_01.jsonl.gz": 145,
+    "s2_graphcodebert_parallel_1320_streaming\\shard_01.prefix_salvaged.jsonl.gz": 145,
+    "s2_graphcodebert_parallel_1320_streaming\\shard_01.pre_repair.jsonl.gz": 145,
+    "s2_graphcodebert_parallel_1320_streaming\\shard_02.jsonl.gz": 147,
+    "s2_graphcodebert_parallel_1320_streaming\\shard_02.pre_repair.jsonl.gz": 147,
+    "s2_graphcodebert_parallel_1320_streaming\\shard_02.resume_prefix_salvaged.jsonl.gz": 147,
+    "s2_graphcodebert_parallel_1320_streaming\\shard_03.jsonl.gz": 144,
+    "s2_graphcodebert_parallel_1320_streaming\\shard_03.prefix_salvaged.jsonl.gz": 144,
+    "s2_graphcodebert_parallel_1320_streaming\\shard_03.pre_repair.jsonl.gz": 144,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard_00.jsonl.gz": 15,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard_00.prefix_salvaged.jsonl.gz": 15,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard_00.stall_backup.jsonl.gz": 15,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard_01.jsonl.gz": 12,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard_01.prefix_salvaged.jsonl.gz": 12,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard_01.stall_backup.jsonl.gz": 12,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard_02.jsonl.gz": 11,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard_02.prefix_salvaged.jsonl.gz": 11,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard_02.stall_backup.jsonl.gz": 11,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard_03.jsonl.gz": 22,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard_03.prefix_salvaged.jsonl.gz": 22,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard_03.stall_backup.jsonl.gz": 22,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v12\\shard_00.jsonl.gz": 2,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v12\\shard_00.prefix_salvaged.jsonl.gz": 2,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v12\\shard_00.stall_backup.jsonl.gz": 2,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v3\\shard_00.jsonl.gz": 5,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v3\\shard_00.prefix_salvaged.jsonl.gz": 5,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v3\\shard_00.stall_backup.jsonl.gz": 5,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v7\\shard_00.jsonl.gz": 1,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v7\\shard_00.stop_salvaged.jsonl.gz": 1,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v4\\shard_00.jsonl.gz": 3,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v4\\shard_00.prefix_salvaged.jsonl.gz": 3,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v4\\shard_00.stall_backup.jsonl.gz": 3,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v5\\shard_00.jsonl.gz": 1,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v5\\shard_00.prefix_salvaged.jsonl.gz": 1,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v5\\shard_00.stall_backup.jsonl.gz": 1,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v2\\shard_00.jsonl.gz": 1,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v2\\shard_00.prefix_salvaged.jsonl.gz": 1,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v2\\shard_00.stall_backup.jsonl.gz": 1,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v3\\shard_00.jsonl.gz": 2,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v3\\shard_00.prefix_salvaged.jsonl.gz": 2,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v3\\shard_00.stall_backup.jsonl.gz": 2,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v1\\shard_00.jsonl.gz": 1,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v1\\shard_00.prefix_salvaged.jsonl.gz": 1,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v1\\shard_00.stall_backup.jsonl.gz": 1,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v2\\shard_00.jsonl.gz": 3,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v2\\shard_00.prefix_salvaged.jsonl.gz": 3,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v2\\shard_00.stall_backup.jsonl.gz": 3,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v4\\shard_00.jsonl.gz": 5,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v4\\shard_00.prefix_salvaged.jsonl.gz": 5,
+    "s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v4\\shard_00.stall_backup.jsonl.gz": 5
+  },
+  "completed_packages_with_any_merged_record": 10172,
+  "completed_packages_without_any_merged_record": 43,
+  "unresolved_completed_package_ledger": "unresolved_completed_packages.jsonl",
+  "validated_output_jsonl_record_counts": {
+    "features_completed.jsonl.gz": 130445,
+    "package_status_features.jsonl.gz": 857
+  },
+  "status_scan_gzip_read_warnings": [
+    {
+      "file": "data\\s2_graphcodebert_direct_pilot_features.incomplete.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_malwarebench_graphcodebert_features.full_run_interrupted.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_malwarebench_graphcodebert_features.interrupted.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_malwarebench_graphcodebert_features_remaining.interrupted_0520.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_1320\\shard_02.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_1320_repair_01_03\\shard_01.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_1320_repair_01_03\\shard_02.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_1320_repair_01_03_resume\\shard_01.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_1320_repair_01_03_resume\\shard_01.pre_stall_resplit.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_1320_repair_01_03_resume\\shard_02.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_1320_repair_01_03_resume\\shard_02.pre_stall_resplit.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_1320_streaming\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_1320_streaming\\shard_01.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_1320_streaming\\shard_01.pre_repair.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_1320_streaming\\shard_02.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_1320_streaming\\shard_02.pre_repair.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_1320_streaming\\shard_03.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_1320_streaming\\shard_03.pre_repair.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard_01.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard_01.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard_02.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard_02.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard_03.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard_03.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v10\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v10\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v11\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v11\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v12\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v12\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v13\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v13\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v14\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v14\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v15\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v15\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v16\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v16\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v17\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v17\\shard_00.speed_restart_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v3\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v4\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v5\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v6\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v6\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v7\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v7\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v8\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v8\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v9\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_repair_v9\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v1\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v1\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v2\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v3\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v4\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v5\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v6\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v6\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard00_speed_v7\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v11\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v11\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v12\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v12\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v13\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v13\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v14\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v14\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v15\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v15\\shard_00.speed_restart_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v2\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v3\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v4\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v5\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v6\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v6\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v7\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v7\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v8\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v8\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v9\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_repair_v9\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v1\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v1\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v2\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v3\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v4\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v5\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard01_speed_v6\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v11\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v11\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v12\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v12\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v13\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v13\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v14\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v14\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v15\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v15\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v16\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v16\\shard_00.speed_restart_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v3\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v4\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v5\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v6\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v6\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v7\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v7\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v8\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v8\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v9\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_repair_v9\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v1\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v1\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v2\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v3\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v4\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v5\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard02_speed_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v10\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v10\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v11\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v11\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v13\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v13\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v14\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v14\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v15\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v15\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v16\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v16\\shard_00.speed_restart_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v2\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v3\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v4\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v5\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v5\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v6\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v6\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v7\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v7\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v8\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v8\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v9\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_repair_v9\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v1\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v1\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v2\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v2\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v3\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v3\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v4\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v4\\shard_00.stall_backup.jsonl.gz",
+      "error": "EOFError"
+    },
+    {
+      "file": "data\\s2_graphcodebert_parallel_resume_all_v2\\shard03_speed_v5\\shard_00.jsonl.gz",
+      "error": "EOFError"
+    }
+  ]
+}

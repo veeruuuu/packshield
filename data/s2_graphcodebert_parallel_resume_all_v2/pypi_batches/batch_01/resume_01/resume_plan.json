@@ -1,0 +1,94 @@
+{
+  "original_rows": 3000,
+  "checkpoint_completed_excluded": 736,
+  "remaining_rows": 2264,
+  "deferred_group_count": 12,
+  "deferred_group_ids": [
+    "tai-alphi_0.1.1_py3-none-any-whl",
+    "databricks-pypi1_0.2_py2-py3-none-any-whl",
+    "forecast-solar-plants-calgary_0.1.0_py3-none-any-whl",
+    "http3_client_1.0.0.1_zip",
+    "tdwtauthauthentication_1.0.8_zip",
+    "kac-tools_0.4.0_py3-none-any-whl",
+    "genesisbot_0.0.5_tar-gz",
+    "master-auth_0.0.1_py3-none-any-whl",
+    "selfsuperaded_7.36_tar-gz",
+    "scrapeasy-jkhjasdsad_0.12_tar-gz",
+    "libpywreproof_9.96_zip",
+    "selfcvstrpong_6.28_zip"
+  ],
+  "shards": [
+    {
+      "shard": 0,
+      "checkpoint": 256,
+      "total": 999,
+      "deferred_ids": [
+        "tdwtauthauthentication_1.0.8_zip",
+        "kac-tools_0.4.0_py3-none-any-whl",
+        "genesisbot_0.0.5_tar-gz",
+        "master-auth_0.0.1_py3-none-any-whl"
+      ]
+    },
+    {
+      "shard": 1,
+      "checkpoint": 8,
+      "total": 1000,
+      "deferred_ids": [
+        "tai-alphi_0.1.1_py3-none-any-whl",
+        "databricks-pypi1_0.2_py2-py3-none-any-whl",
+        "forecast-solar-plants-calgary_0.1.0_py3-none-any-whl",
+        "http3_client_1.0.0.1_zip"
+      ]
+    },
+    {
+      "shard": 2,
+      "checkpoint": 472,
+      "total": 1001,
+      "deferred_ids": [
+        "selfsuperaded_7.36_tar-gz",
+        "scrapeasy-jkhjasdsad_0.12_tar-gz",
+        "libpywreproof_9.96_zip",
+        "selfcvstrpong_6.28_zip"
+      ]
+    }
+  ],
+  "salvage": [
+    {
+      "file": "shard_00.jsonl.gz.stall_backup_20261006_162757.bak",
+      "valid_json_records": 484,
+      "unique_group_ids": 256,
+      "statuses": {
+        "ok": 470,
+        "parse_error": 4,
+        "no_supported_source": 10
+      },
+      "read_error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "shard_01.jsonl.gz.stall_backup_20261006_162757.bak",
+      "valid_json_records": 8,
+      "unique_group_ids": 8,
+      "statuses": {
+        "ok": 5,
+        "no_supported_source": 3
+      },
+      "read_error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    },
+    {
+      "file": "shard_02.jsonl.gz.stall_backup_20261006_162757.bak",
+      "valid_json_records": 1088,
+      "unique_group_ids": 472,
+      "statuses": {
+        "ok": 1063,
+        "no_supported_source": 14,
+        "parse_error": 11
+      },
+      "read_error": "EOFError: Compressed file ended before the end-of-stream marker was reached"
+    }
+  ],
+  "salvaged_record_count": 1580,
+  "salvaged_unique_group_ids": 736,
+  "resume_input": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\pypi_batches\\batch_01\\resume_01\\input.jsonl",
+  "resume_launcher": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\pypi_batches\\batch_01\\resume_01\\run_resume_batch01.ps1",
+  "salvaged_output": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\pypi_batches\\batch_01\\runs\\20261006_151735\\salvaged_prefix\\salvaged_features.jsonl.gz"
+}

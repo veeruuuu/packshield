@@ -1,0 +1,65 @@
+{
+  "created_local": "2026-10-06",
+  "source_available_pypi_ids": 10608,
+  "excluded_confirmed_completed_pypi_ids": 28,
+  "excluded_from_package_checkpoints": 0,
+  "excluded_from_prior_feature_merge": 28,
+  "remaining_pypi_ids": 10580,
+  "batch_size_target": 3000,
+  "batch_count": 4,
+  "ecosystem": "pypi",
+  "parallel_shards_per_batch": 3,
+  "parser_workers_per_shard": 1,
+  "archive_batch_size": 4,
+  "completion_basis": "package checkpoints across S2 shard logs plus prior stable merged feature ledger",
+  "batches": [
+    {
+      "batch": 1,
+      "input": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\pypi_batches\\batch_01\\input.jsonl",
+      "launcher": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\pypi_batches\\batch_01\\run_pypi_batch_01.ps1",
+      "packages": 3000,
+      "estimated_work_units": 27673100.56,
+      "ecosystem": "pypi",
+      "labels": {
+        "benign": 1510,
+        "malicious": 1490
+      }
+    },
+    {
+      "batch": 2,
+      "input": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\pypi_batches\\batch_02\\input.jsonl",
+      "launcher": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\pypi_batches\\batch_02\\run_pypi_batch_02.ps1",
+      "packages": 3000,
+      "estimated_work_units": 27673102.02,
+      "ecosystem": "pypi",
+      "labels": {
+        "malicious": 1479,
+        "benign": 1521
+      }
+    },
+    {
+      "batch": 3,
+      "input": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\pypi_batches\\batch_03\\input.jsonl",
+      "launcher": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\pypi_batches\\batch_03\\run_pypi_batch_03.ps1",
+      "packages": 3000,
+      "estimated_work_units": 27673101.97,
+      "ecosystem": "pypi",
+      "labels": {
+        "malicious": 1490,
+        "benign": 1510
+      }
+    },
+    {
+      "batch": 4,
+      "input": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\pypi_batches\\batch_04\\input.jsonl",
+      "launcher": "C:\\Users\\Veeresh\\Desktop\\packshield\\data\\s2_graphcodebert_parallel_resume_all_v2\\pypi_batches\\batch_04\\run_pypi_batch_04.ps1",
+      "packages": 1580,
+      "estimated_work_units": 27572217.29,
+      "ecosystem": "pypi",
+      "labels": {
+        "benign": 919,
+        "malicious": 661
+      }
+    }
+  ]
+}

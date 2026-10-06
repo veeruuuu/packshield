@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "C:\Users\Veeresh\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\Veeresh\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 295, in <module>
+    main()
+  File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 287, in main
+    result = run(args.index, args.npm_root, args.pypi_root, args.output, args.model_name,
+  File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 197, in run
+    with FeatureWorker(model_name, code_length, data_flow_length,
+  File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 35, in __init__
+    self._start()
+  File "C:\Users\Veeresh\Desktop\packshield\packshield\tools\prepare_s2_graphcodebert_features.py", line 72, in _start
+    raise FeatureWorkerError(f"S2 parser worker exited during startup (code {code})")
+__main__.FeatureWorkerError: S2 parser worker exited during startup (code None)
